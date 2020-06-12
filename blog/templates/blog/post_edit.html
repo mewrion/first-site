@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2020 by mewrion (http://jsbin.com/bamepoj/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+</body>
+</html>
